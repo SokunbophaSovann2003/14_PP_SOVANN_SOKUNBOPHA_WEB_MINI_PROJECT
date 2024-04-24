@@ -72,12 +72,14 @@ export const getWorkspaceByIdService = async(id) =>{
 //done
 export const deleteWorkspaceByIdService = async(id) =>{
     const header = await requestHeader();
-    const res = await fetch('http://110.74.194.123:8989/api/todo/v1/workspaces/'+id,{
+    console.log("My header", header);
+    console.log("WorkSpace ID", id.id);
+    const res = await fetch('http://110.74.194.123:8989/api/todo/v1/workspaces/'+id.id,{
         method: 'DELETE',
         headers: header,
     });
    
     const data = await res.json();
-    console.log("Data : ", data);
+    console.log("Delete data response: ", data);
     return data;
 };

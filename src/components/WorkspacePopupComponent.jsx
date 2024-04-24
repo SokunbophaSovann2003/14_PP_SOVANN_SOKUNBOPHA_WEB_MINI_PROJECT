@@ -24,7 +24,7 @@ export default function WorkspacePopupComponent() {
             required
           />
           <div className="modal-action">
-            <button type="submit" htmlFor="my_modal_6" className="bg-blue-600 rounded-lg text-white mr-3 h-12 px-5 flex items-center">
+            <button htmlFor="my_modal_6" type="submit" className="bg-blue-600 rounded-lg text-white mr-3 h-12 px-5 flex items-center">
               Create
             </button>
             <label htmlFor="my_modal_6" className="btn">

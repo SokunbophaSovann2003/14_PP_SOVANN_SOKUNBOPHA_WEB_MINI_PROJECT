@@ -1,5 +1,5 @@
 "use server"
-import { createWorkspaceService } from "@/service/workspace.service";
+import { createWorkspaceService, deleteWorkspaceByIdService, workspaceService } from "@/service/workspace.service";
 // import { useRouter } from "next/navigation";
 import { redirect } from "next/navigation";
 
@@ -11,8 +11,25 @@ async function createWorkspace(data){
 
     console.log("THis is my new workspace : ", res);
     if (res.status == 200) {
-        redirect.push("/board")
+        redirect("/todo-board")
     }
 }
 
-export {createWorkspace}
+async function deleteWorkspaceById(id) {
+    const res = await deleteWorkspaceByIdService(id);
+    console.log("delete res : ", res);
+    if (res.status == 200) {
+        redirect("/todo-board")
+    }
+};
+
+async function getAllWorkspace(){
+  const res = await workspaceService();
+
+  console.log("THis is my new workspace : ", res);
+  if (res.status == 200) {
+      redirect("/todo-board")
+  }
+}
+
+export {createWorkspace, deleteWorkspaceById}

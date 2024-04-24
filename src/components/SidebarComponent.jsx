@@ -31,7 +31,8 @@ export default async function SidebarComponent() {
               <div className="rounded-full w-4 h-4 bg-todo"></div>
               <div className="flex justify-between w-full pl-3">
                 <p>{item?.workspaceName}</p>
-                <EditDeleteDropDownComponent />
+                <EditDeleteDropDownComponent id={item.workSpaceId}></EditDeleteDropDownComponent>
+                {/* <EditDeleteDropDownComponent><EditDeleteDropDownComponent/> */}
               </div>
             </div>
           );

@@ -21,7 +21,7 @@ const LoginForm = () => {
     })
     console.log("response : ", res);
     if (res.status == 200) {
-      router.push("/board")
+      router.push("/todo-board")
     }
   }
   return (

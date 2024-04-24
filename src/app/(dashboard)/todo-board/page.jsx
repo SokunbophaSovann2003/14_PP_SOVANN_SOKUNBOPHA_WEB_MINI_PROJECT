@@ -4,10 +4,11 @@ import SidebarComponent from '@/components/SidebarComponent'
 import TodoCardComponent from '@/components/TodoCardComponent'
 import React from 'react'
 import { workspaceService } from '@/service/workspace.service'
+import { getAllTask } from '@/actions/taskAction'
 
-async function BoardView() {
-  // const data = await workspaceService();
-  // console.log("data22222222: ",data);
+async function BoardViewNew() {
+//   const data = await getAllTask();
+//   console.log("data22222222: ",data);
   return (
     <div className="items-start justify-center flex w-full">
       <div className="w-[25%]">
@@ -33,4 +34,4 @@ async function BoardView() {
   )
 }
 
-export default BoardView
+export default BoardViewNew
